@@ -23,29 +23,3 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
-
-  - id: www-sunney-cf
-    name: www.sunney.cf
-    description: 'Hyserver.'
-    url: 'https://www.sunney.cf'
-    method: GET
-    expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
-
-  - id: rnvps-sunney-cf
-    name: rnvps.sunney.cf
-    url: 'https://rnvps.sunney.cf/'
-    method: GET
-    expectStatus: 200
-
-- id: replpp-sunney-cf
-    name: replpp.sunney.cf
-    url: 'https://replpp.sunney.cf/'
-    method: GET
-    expectStatus: 200
-
-- id: lebare-sunney-cf
-    name: lebare.sunney.cf
-    url: 'https://lebare.sunney.cf/'
-    method: GET
-    expectStatus: 200
