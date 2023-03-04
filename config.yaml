@@ -1,25 +1,43 @@
 settings:
-  title: 'Status Page'
+  title: '网站状态'
   url: 'https://web.sunney.cf' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '所有网站正常'
+  notAllmonitorsOperational: '部分网站异常'
+  monitorLabelOperational: '正常'
+  monitorLabelNotOperational: '异常'
+  monitorLabelNoData: '无数据'
+  dayInHistogramNoData: '无数据'
+  dayInHistogramOperational: '正常'
+  dayInHistogramNotOperational: ' 异常' # xx incident(s) recorded
 
 monitors:
   - id: www-sunney-ml # unique identifier
     name: www.sunney.ml
-    description: 'Hyserer.' # default=empty
+    description: 'Hyserver-ml.' # default=empty
     url: 'https://www.sunney.ml:8443/' # URL to fetch
     method: GET # default=GET
+    expectStatus: 302 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+
+  - id: www-sunney-cf # unique identifier
+    name: www.sunney.cf
+    description: 'Hyserer-cf.' # default=empty
+    url: 'https://www.sunney.cf/' # URL to fetch
+    method: GET # default=GET
     expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+    
+  - id: rnvps-sunney-cf # unique identifier
+    name: rnvps.sunney.cf
+    description: 'RNVps-cf' # default=empty
+    url: 'https://rnvps.sunney.cf/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 302 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
