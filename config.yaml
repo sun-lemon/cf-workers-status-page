@@ -20,7 +20,7 @@ monitors:
     description: 'Hyserver-ml.' # default=empty
     url: 'https://www.sunney.ml:8443/' # URL to fetch
     method: GET # default=GET
-    expectStatus: 302 # operational status, default=200
+    expectStatus: 522 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
@@ -38,7 +38,7 @@ monitors:
     description: 'RNVps-cf' # default=empty
     url: 'https://rnvps.sunney.cf/' # URL to fetch
     method: GET # default=GET
-    expectStatus: 302 # operational status, default=200
+    expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
