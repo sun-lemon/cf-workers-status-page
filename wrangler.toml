@@ -13,7 +13,7 @@ bucket = "out"
 entry-point = "./"
 
 # uncomment and adjust following if you are not using GitHub Actions
-[env.production]
+#[env.production]
 #kv-namespaces = [{binding="KV_STATUS_PAGE", id="xxxx", preview_id=""}]
 kv-namespaces = [{binding="KV_STATUS_PAGE", id="befc3c096fdd4b5b86c3d1e9a11e3b98"}]
 #zone_id="xxx"
