@@ -41,15 +41,6 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
-
-  - id: woiden-sunney-cf # unique identifier
-    name: woiden.sunney.cf
-    description: 'WoidenVps-cf' # default=empty
-    url: 'https://woiden.sunney.cf/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
-    linkable: true # allows the title to be a link, default=true
     
   - id: replpp-sunney-cf # unique identifier
     name: replpp.sunney.cf
