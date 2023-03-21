@@ -50,3 +50,12 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
+    
+  - id: vercelgit-sunney-cf # unique identifier
+    name: vercelgit.sunney.cf
+    description: 'replpp-cf' # default=empty
+    url: 'https://vercelgit.sunney.cf/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
